@@ -8,6 +8,9 @@
             Console.WriteLine("Welcome to the Maori Quiz!");
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
+
+            Console.Clear();
+
             Console.WriteLine("Hello, " + name + "!"); Console.WriteLine("Which level would you like to play?");
             Console.WriteLine("1 - Born Yesterday");
             Console.WriteLine("2 - Beginner");
@@ -43,8 +46,9 @@
                     levelExists=(true);
                 }
             } while (levelExists == false);
-            Console.WriteLine($"You have chosen level {level}.");
-            Console.WriteLine("Good luck and have fun!");
+            Console.Clear();
+            Console.WriteLine($"You have chosen level {level}!");
+            Console.WriteLine("\nGood luck and have fun!");
       
         
         }
