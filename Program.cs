@@ -105,10 +105,24 @@
             // Results
             Console.Clear();
             Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreMedium);
-        }
+           
+            // Hard Difficulty
+            else if (difficulty == "3")
+            {
+                // array of hard questions and answers
+                string[] hardQuestions = {
+                "1. What term is used to describe the traditional Maori form of art? \nA) Tuhituhi\nB) Whakairo\nC) Whakapapa\nD) Kowhaiwhai",
+                "2. What is the traditional Maori name for the South Island? \nA) Te Wai Pounamu\nB) Te Ika a Maui\nC) Te Aroha\nD) Te Manawa",
+                "3. What is the name of the paddle used in Maori ceremonial welcomes? \nA) Hoho Paddle\nB) Waipura Paddle\nC) Waka Paddle\nD) Tera tahi Paddle",
+                "4. What are the three baskets of knowledge in Maori culture?\nA) Basket of light, Basket of darkness, basket ball hoop\nB) Basket of Power, Basket of Beauty, Basket of Hope\nC) Basket of light, Basket of darkness, Basket of Pursuit \nD) Basket of flowers, Basket of smiles, Basket of positivity",
+                "5. What does the word “kia kaha” mean?\nA) Be weak\nB) Please come\nC) Thank you \nD) Stay strong ", };
+                string[] hardAnswers = { "B", "A", "A", "C", "D" };
+
+                Console.WriteLine("You have selected the hard difficulty. Let's get started!");
 
 
+            }
 
     }
-}
+
 }
