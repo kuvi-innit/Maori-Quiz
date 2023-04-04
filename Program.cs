@@ -153,20 +153,6 @@
                 // Results
                 Console.WriteLine("You have finished the Maori quiz! Your score is: {0}/5", scoreHard);
             }
-
-            // Level Selection
-            Console.WriteLine("Would you like to go back to the level select? (Y/N)");
-            string levelSelect = Console.ReadLine().ToUpper();
-
-            // Level Selection Validation
-            while (levelSelect != "Y" && levelSelect != "N")
-            {
-                Console.WriteLine("Please select a valid answer: Y or N");
-                levelSelect = Console.ReadLine().ToUpper();
-            }
-
-            
-           
         }
     }
 }
