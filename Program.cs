@@ -63,11 +63,52 @@
                 Console.Clear();
                 // Results
                 Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreEasy);
+          
+            
             }
 
+            // array of medium questions and answers
+            string[] mediumQuestions = {
+               "1. What does thank you mean in Moari?\nA) Nga Mihi\nB) Kia Ora\nC) Mihi Aroha\nD) Talofa",
+               "2. What is the name of the famous Maori war dance?\nA) Haka\nB) Khalsa\nC) Ta tona\nD) Salsa ",
+               "3. What is the traditional method of cooking in Maori culture?\nA) Khanah\nB) Hangi\nC) Apa Tihi\nD) Oni Ma",
+               "4. Who were the first people to settle in New Zealand?\nA) The Maori\nB) The Indian\nC) European\nD) Samoan",
+               "5. What is the meaning of the word whanau in Maori?\nA) Friends\nB) Love\nC) Family\nD) Myself", };
+            string[] mediumAnswers = { "A", "A", "B", "A", "C" };
 
+            Console.WriteLine("You have selected the medium difficulty. Let's get started!");
 
+            // medium Questions
+            for (int i = 0; i < mediumQuestions.Length; i++)
+            {
+                Console.WriteLine(mediumQuestions[i]);
+                string answermedium = Console.ReadLine().ToUpper();
 
+                // medium Answer Validation
+                while (answermedium != "A" && answermedium != "B" && answermedium != "C" && answermedium != "D")
+                {
+                    Console.WriteLine("Please select a valid answer: A, B, C or D");
+                    answermedium = Console.ReadLine().ToUpper();
+                }
+
+                // medium Score
+                if (answermedium == mediumAnswers[i])
+                {
+                    Console.WriteLine("Correct"); scoreMedium++;
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect");
+                }
+            }
+
+            // Results
+            Console.Clear();
+            Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreMedium);
         }
-        }
+
+
+
+    }
+}
 }
