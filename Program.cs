@@ -15,7 +15,11 @@
             Console.WriteLine("Welcome to the Moari Quiz!");
             Console.Write("Please enter your name: ");
             name = Console.ReadLine();
-          
+
+            // Difficulty Selection
+            Console.WriteLine("Hello," + name + "!"); Console.WriteLine("Which level would you like to play: 1) Easy 2) Medium 3) Hard");
+            difficulty = Console.ReadLine().ToLower();
+
             // Difficulty Selection Validation
             while (difficulty != "1" && difficulty != "2" && difficulty != "3")
             {
@@ -23,7 +27,6 @@
                 difficulty = Console.ReadLine().ToLower();
             }
             Console.Clear();
-           
             // Easy Difficulty
             if (difficulty == "1")
             {
@@ -37,6 +40,7 @@
                 string[] easyAnswers = { "A", "B", "B", "A", "D" };
 
                 Console.WriteLine("You have selected the easy difficulty. Let's get started!");
+
                 // Easy Questions
                 for (int i = 0; i < easyQuestions.Length; i++)
                 {
@@ -63,49 +67,51 @@
                 Console.Clear();
                 // Results
                 Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreEasy);
-          
-            
             }
-
-            // array of medium questions and answers
-            string[] mediumQuestions = {
+            // Hard Difficulty
+            else if (difficulty == "2")
+            {
+                // array of medium questions and answers
+                string[] mediumQuestions = {
                "1. What does thank you mean in Moari?\nA) Nga Mihi\nB) Kia Ora\nC) Mihi Aroha\nD) Talofa",
                "2. What is the name of the famous Maori war dance?\nA) Haka\nB) Khalsa\nC) Ta tona\nD) Salsa ",
                "3. What is the traditional method of cooking in Maori culture?\nA) Khanah\nB) Hangi\nC) Apa Tihi\nD) Oni Ma",
                "4. Who were the first people to settle in New Zealand?\nA) The Maori\nB) The Indian\nC) European\nD) Samoan",
                "5. What is the meaning of the word whanau in Maori?\nA) Friends\nB) Love\nC) Family\nD) Myself", };
-            string[] mediumAnswers = { "A", "A", "B", "A", "C" };
+                string[] mediumAnswers = { "A", "A", "B", "A", "C" };
 
-            Console.WriteLine("You have selected the medium difficulty. Let's get started!");
+                Console.WriteLine("You have selected the medium difficulty. Let's get started!");
 
-            // medium Questions
-            for (int i = 0; i < mediumQuestions.Length; i++)
-            {
-                Console.WriteLine(mediumQuestions[i]);
-                string answermedium = Console.ReadLine().ToUpper();
-
-                // medium Answer Validation
-                while (answermedium != "A" && answermedium != "B" && answermedium != "C" && answermedium != "D")
+                // medium Questions
+                for (int i = 0; i < mediumQuestions.Length; i++)
                 {
-                    Console.WriteLine("Please select a valid answer: A, B, C or D");
-                    answermedium = Console.ReadLine().ToUpper();
+                    Console.WriteLine(mediumQuestions[i]);
+                    string answermedium = Console.ReadLine().ToUpper();
+
+                    // medium Answer Validation
+                    while (answermedium != "A" && answermedium != "B" && answermedium != "C" && answermedium != "D")
+                    {
+                        Console.WriteLine("Please select a valid answer: A, B, C or D");
+                        answermedium = Console.ReadLine().ToUpper();
+                    }
+
+                    // medium Score
+                    if (answermedium == mediumAnswers[i])
+                    {
+                        Console.WriteLine("Correct"); scoreMedium++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect");
+                    }
                 }
 
-                // medium Score
-                if (answermedium == mediumAnswers[i])
-                {
-                    Console.WriteLine("Correct"); scoreMedium++;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect");
-                }
+                // Results
+                Console.Clear();
+                Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreMedium);
             }
 
-            // Results
-            Console.Clear();
-            Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreMedium);
-           
+
             // Hard Difficulty
             else if (difficulty == "3")
             {
@@ -120,9 +126,48 @@
 
                 Console.WriteLine("You have selected the hard difficulty. Let's get started!");
 
+                // Hard Questions
+                for (int i = 0; i < hardQuestions.Length; i++)
+                {
+                    Console.WriteLine(hardQuestions[i]);
+                    string answerHard = Console.ReadLine().ToUpper();
 
+                    // Hard Answer Validation
+                    while (answerHard != "A" && answerHard != "B" && answerHard != "C" && answerHard != "D")
+                    {
+                        Console.WriteLine("Please select a valid answer: A, B, C or D");
+                        answerHard = Console.ReadLine().ToUpper();
+                    }
+
+                    // Hard Score
+                    if (answerHard == hardAnswers[i])
+                    {
+                        Console.WriteLine("Correct"); scoreHard++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect");
+                    }
+                }
+
+                // Results
+                Console.WriteLine("You have finished the Maori quiz! Your score is: {0}/5", scoreHard);
             }
 
-    }
+            // Level Selection
+            Console.WriteLine("Would you like to go back to the level select? (Y/N)");
+            string levelSelect = Console.ReadLine().ToUpper();
 
+            // Level Selection Validation
+            while (levelSelect != "Y" && levelSelect != "N")
+            {
+                Console.WriteLine("Please select a valid answer: Y or N");
+                levelSelect = Console.ReadLine().ToUpper();
+            }
+
+            
+           
+        }
+    }
 }
+
