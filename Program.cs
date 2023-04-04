@@ -37,10 +37,37 @@
                 string[] easyAnswers = { "A", "B", "B", "A", "D" };
 
                 Console.WriteLine("You have selected the easy difficulty. Let's get started!");
+                // Easy Questions
+                for (int i = 0; i < easyQuestions.Length; i++)
+                {
+                    Console.WriteLine(easyQuestions[i]);
+                    string answerEasy = Console.ReadLine().ToUpper();
 
+                    // Easy Answer Validation
+                    while (answerEasy != "A" && answerEasy != "B" && answerEasy != "C" && answerEasy != "D")
+                    {
+                        Console.WriteLine("Please select a valid answer: A, B, C or D");
+                        answerEasy = Console.ReadLine().ToUpper();
+                    }
 
-
-
+                    // Easy Score
+                    if (answerEasy == easyAnswers[i])
+                    {
+                        Console.WriteLine("Correct"); scoreEasy++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect");
+                    }
+                }
+                Console.Clear();
+                // Results
+                Console.WriteLine("You have finished the quiz! Your score is: {0}/5", scoreEasy);
             }
+
+
+
+
+        }
         }
 }
