@@ -15,7 +15,14 @@
             Console.WriteLine("Welcome to the Moari Quiz!");
             Console.Write("Please enter your name: ");
             name = Console.ReadLine();
-
+          
+            // Difficulty Selection Validation
+            while (difficulty != "1" && difficulty != "2" && difficulty != "3")
+            {
+                Console.WriteLine("Please select a valid difficulty: 1 or 2 or 3");
+                difficulty = Console.ReadLine().ToLower();
+            }
+            Console.Clear();
         }
     }
 }
