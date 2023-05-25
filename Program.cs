@@ -18,8 +18,9 @@
 
         public static string GetDifficulty()
         {
+            string name = Console.ReadLine();
             string difficulty;
-            Console.WriteLine("Hello, {0}!", name);
+            Console.WriteLine($"Hello,{name}");
             Console.WriteLine("Which level would you like to play: 1) Easy 2) Medium 3) Hard");
 
             do
@@ -44,9 +45,12 @@
             if (difficulty == "1")
             {
                 questions = new string[] {
-                    "1. What is the Maori term for 'New Zealand'?\nA) Aotearoa\nB) Hawaii\nC) Australia\nD) Fiji",
-                    // ...
-                };
+                "1. What is the Maori term for 'New Zealand'?\nA) Aotearoa\nB) Hawaii\nC) Australia\nD) Fiji",
+                "2. What is the traditional Maori greeting?\nA) Aloha\nB) Kia Ora\nC) Hola\nD) Bonjour",
+                "3. What animal is a symbol of New Zealand?\nA) Emu\nB) Kiwi\nC) Penguin\nD) Koala",
+                "4. Who was he first person to discover New Zealand?\nA) Captain James Cook\nB) Abel Tasman\nC) Abraham Lincoln\nD) Barack Obama",
+                "5. The Maori name for New Zealand means?\nA) Land Of Milk And Honey\nB) Australia's Brother\nC) Whale Rider\nD) Land of the long white cloud", };
+               
                 answers = new string[] { "A", "B", "B", "A", "D" };
 
                 Console.WriteLine("You have selected the easy difficulty. Let's get started!");
@@ -54,8 +58,11 @@
             else if (difficulty == "2")
             {
                 questions = new string[] {
-                    "1. What does thank you mean in Maori?\nA) Nga Mihi\nB) Kia Ora\nC) Mihi Aroha\nD) Talofa",
-                    // ...
+               "1. What does thank you mean in Moari?\nA) Nga Mihi\nB) Kia Ora\nC) Mihi Aroha\nD) Talofa",
+               "2. What is the name of the famous Maori war dance?\nA) Haka\nB) Khalsa\nC) Ta tona\nD) Salsa ",
+               "3. What is the traditional method of cooking in Maori culture?\nA) Khanah\nB) Hangi\nC) Apa Tihi\nD) Oni Ma",
+               "4. Who were the first people to settle in New Zealand?\nA) The Maori\nB) The Indian\nC) European\nD) Samoan",
+               "5. What is the meaning of the word whanau in Maori?\nA) Friends\nB) Love\nC) Family\nD) Myself"
                 };
                 answers = new string[] { "A", "A", "B", "A", "C" };
 
@@ -64,8 +71,12 @@
             else
             {
                 questions = new string[] {
-                    "1. What term is used to describe the traditional Maori form of art?\nA) Tuhituhi\nB) Whakairo\nC) Whakapapa\nD) Kowhaiwhai",
-                    // ...
+                 "1. What term is used to describe the traditional Maori form of art? \nA) Tuhituhi\nB) Whakairo\nC) Whakapapa\nD) Kowhaiwhai",
+                 "2. What is the traditional Maori name for the South Island? \nA) Te Wai Pounamu\nB) Te Ika a Maui\nC) Te Aroha\nD) Te Manawa",
+                 "3. What is the name of the paddle used in Maori ceremonial welcomes? \nA) Hoho Paddle\nB) Waipura Paddle\nC) Waka Paddle\nD) Tera tahi Paddle",
+                 "4. What are the three baskets of knowledge in Maori culture?\nA) Basket of light, Basket of darkness, basket ball hoop\nB) Basket of Power, Basket of Beauty, Basket of Hope\nC) Basket of light, Basket of darkness, Basket of Pursuit \nD) Basket of flowers, Basket of smiles, Basket of positivity",
+                    "5. What does the word “kia kaha” mean?\nA) Be weak\nB) Please come\nC) Thank you \nD) Stay strong"   ,
+                   
                 };
                 answers = new string[] { "B", "A", "A", "C", "D" };
 
