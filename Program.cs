@@ -13,6 +13,12 @@ namespace Maori_Quiz
             Console.WriteLine("Welcome to the Maori Quiz!");
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
+            while (string.IsNullOrWhiteSpace(name) == true) 
+            {
+                Console.Clear();
+                Console.WriteLine("Please enter valid name");
+                name = Console.ReadLine();
+            }
 
             // Difficulty Selection
             string difficulty = GetDifficulty(name); // Pass the name to GetDifficulty method
